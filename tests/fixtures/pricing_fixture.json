@@ -1,0 +1,22 @@
+{
+  "gpt-4": {
+    "input_cost_per_1k_tokens": 0.03,
+    "output_cost_per_1k_tokens": 0.06,
+    "tier_type": "premium"
+  },
+  "gpt-3.5-turbo": {
+    "input_cost_per_1k_tokens": 0.0015,
+    "output_cost_per_1k_tokens": 0.002,
+    "tier_type": "standard"
+  },
+  "claude-3-opus": {
+    "input_cost_per_1k_tokens": 0.015,
+    "output_cost_per_1k_tokens": 0.075,
+    "tier_type": "premium"
+  },
+  "gemini-1.5-pro": {
+    "input_cost_per_1k_tokens": 0.0035,
+    "output_cost_per_1k_tokens": 0.0105,
+    "tier_type": "standard"
+  }
+}
