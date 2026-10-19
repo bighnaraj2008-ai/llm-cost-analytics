@@ -25,3 +25,25 @@ A production-grade relational database schema and analytical SQL aggregation eng
    ```bash
    pytest
    ```
+
+## CLI Usage Guide
+
+```bash
+# Run schema migrations
+python -m src.main migrate
+
+# Seed sample pricing and telemetry
+python -m src.main seed
+
+# View daily user cost breakdown
+python -m src.main report --type daily
+
+# View model utilization metrics
+python -m src.main report --type models
+
+# Detect anomalous cost spikes exceeding $10.00
+python -m src.main report --type spikes --threshold 10.0
+
+# Export daily costs to CSV
+python -m src.main export --output daily_costs.csv
+```
