@@ -3,15 +3,22 @@ import os
 from typing import Optional, List, Any
 
 class Database:
-    """SQLite database connection and migration manager."""
+    """SQLite database connection and migration manager with pragmas and pooling."""
 
-    def __init__(self, db_path: str = ":memory:"):
+    def __init__(self, db_path: str = ":memory:", timeout: float = 30.0):
         self.db_path = db_path
+        self.timeout = timeout
         self.conn: Optional[sqlite3.Connection] = None
 
     def connect(self) -> sqlite3.Connection:
         if self.conn is None:
-            self.conn = sqlite3.connect(self.db_path)
+            self.conn = sqlite3.connect(self.db_path, timeout=self.timeout)
+            self.conn.row_factory = sqlite3.Row
+            # Configure foreign key pragmas and WAL journal mode
+            self.conn.execute("PRAGMA foreign_keys = ON;")
+            if self.db_path != ":memory:":
+                self.conn.execute("PRAGMA journal_mode = WAL;")
+                self.conn.execute("PRAGMA synchronous = NORMAL;")
         return self.conn
 
     def execute(self, sql: str, params: tuple = ()) -> sqlite3.Cursor:
