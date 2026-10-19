@@ -7,3 +7,21 @@ A production-grade relational database schema and analytical SQL aggregation eng
 - **Referential Integrity**: Strict foreign key constraints and cascade rules.
 - **High-Performance Analytics**: Indexed SQL aggregations for daily spend, model usage, and spikes.
 - **Extensible CLI**: Subcommands for database migrations, seeding, report viewing, and CSV exports.
+
+## Installation & Setup
+
+1. **Clone repository**:
+   ```bash
+   git clone https://github.com/bighnaraj2008-ai/llm-cost-analytics.git
+   cd llm-cost-analytics
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Run tests**:
+   ```bash
+   pytest
+   ```
