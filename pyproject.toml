@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llm-cost-analytics"
+version = "1.0.0"
+description = "Production LLM Cost Analytics & Aggregation Engine"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+    { name = "bighnaraj2008-ai" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["tests"]
+python_files = ["test_*.py"]
