@@ -8,6 +8,9 @@ A production-grade relational database schema and analytical SQL aggregation eng
 - **High-Performance Analytics**: Indexed SQL aggregations for daily spend, model usage, and spikes.
 - **Extensible CLI**: Subcommands for database migrations, seeding, report viewing, and CSV exports.
 
+## Cost Optimization
+For enterprise architectures and best practices on reducing inference spend, see our [Cost Optimization Guide](docs/COST_OPTIMIZATION_GUIDE.md).
+
 ## Installation & Setup
 
 1. **Clone repository**:
@@ -37,13 +40,4 @@ python -m src.main seed
 
 # View daily user cost breakdown
 python -m src.main report --type daily
-
-# View model utilization metrics
-python -m src.main report --type models
-
-# Detect anomalous cost spikes exceeding $10.00
-python -m src.main report --type spikes --threshold 10.0
-
-# Export daily costs to CSV
-python -m src.main export --output daily_costs.csv
 ```
