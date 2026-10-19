@@ -8,5 +8,6 @@ CREATE TABLE IF NOT EXISTS api_requests (
     total_tokens INTEGER NOT NULL,
     status_code INTEGER DEFAULT 200,
     latency_ms REAL DEFAULT 0.0,
-    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (model_id) REFERENCES model_pricing(id) ON DELETE CASCADE
 );
