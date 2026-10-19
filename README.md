@@ -8,36 +8,17 @@ A production-grade relational database schema and analytical SQL aggregation eng
 - **High-Performance Analytics**: Indexed SQL aggregations for daily spend, model usage, and spikes.
 - **Extensible CLI**: Subcommands for database migrations, seeding, report viewing, and CSV exports.
 
-## Cost Optimization
-For enterprise architectures and best practices on reducing inference spend, see our [Cost Optimization Guide](docs/COST_OPTIMIZATION_GUIDE.md).
+## Documentation
+- [System Architecture](docs/ARCHITECTURE.md)
+- [Analytical Queries](docs/ANALYTICAL_QUERIES.md)
+- [API Reference](docs/API.md)
+- [Cost Optimization Guide](docs/COST_OPTIMIZATION_GUIDE.md)
 
 ## Installation & Setup
 
-1. **Clone repository**:
-   ```bash
-   git clone https://github.com/bighnaraj2008-ai/llm-cost-analytics.git
-   cd llm-cost-analytics
-   ```
-
-2. **Install dependencies**:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Run tests**:
-   ```bash
-   pytest
-   ```
-
-## CLI Usage Guide
-
 ```bash
-# Run schema migrations
-python -m src.main migrate
-
-# Seed sample pricing and telemetry
-python -m src.main seed
-
-# View daily user cost breakdown
-python -m src.main report --type daily
+git clone https://github.com/bighnaraj2008-ai/llm-cost-analytics.git
+cd llm-cost-analytics
+pip install -r requirements.txt
+pytest
 ```
