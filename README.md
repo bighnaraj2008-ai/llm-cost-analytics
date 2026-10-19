@@ -13,6 +13,7 @@ A production-grade relational database schema and analytical SQL aggregation eng
 - [Analytical Queries](docs/ANALYTICAL_QUERIES.md)
 - [API Reference](docs/API.md)
 - [Cost Optimization Guide](docs/COST_OPTIMIZATION_GUIDE.md)
+- [Frequently Asked Questions (FAQ)](docs/FAQ.md)
 
 ## Installation & Setup
 
