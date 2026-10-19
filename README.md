@@ -14,6 +14,7 @@ A production-grade relational database schema and analytical SQL aggregation eng
 - [API Reference](docs/API.md)
 - [Cost Optimization Guide](docs/COST_OPTIMIZATION_GUIDE.md)
 - [Frequently Asked Questions (FAQ)](docs/FAQ.md)
+- [Troubleshooting Guide](docs/TROUBLESHOOTING.md)
 
 ## Installation & Setup
 
